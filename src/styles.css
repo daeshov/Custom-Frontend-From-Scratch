@@ -1,6 +1,14 @@
-.header-container {
+.segment-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; /* This will make the container take up the full viewport height */
+}
+
+.segment-container,
+button {
+  position: relative;
+  top: 50%;
+  left: 41%;
+  transform: translate(-50%, -50%); 
 }

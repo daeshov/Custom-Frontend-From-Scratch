@@ -1,9 +1,8 @@
-// import './styles.css';
 import { Header, Segment } from 'semantic-ui-react'
 
 const HeaderExampleInverted = () => (
   <Segment inverted >
-    <Header inverted as='h1' color='red'>
+    <Header inverted textAlign='center' as='h1' color='red'>
     scalesandslumbers 
     </Header>
     <button>
@@ -13,9 +12,8 @@ const HeaderExampleInverted = () => (
       shop
     </button>
     <button>
-      
+      login
     </button>
   </Segment>
 )
-
 export default HeaderExampleInverted
