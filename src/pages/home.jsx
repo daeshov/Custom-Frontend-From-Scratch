@@ -1,11 +1,13 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-undef */
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
-
 import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import { Component } from 'react'
 import { InView } from 'react-intersection-observer'
+// import { Route, Router } from 'react-router-dom'
 import {
   Button,
   Container,
@@ -102,12 +104,16 @@ class DesktopContainer extends Component {
                 </Menu.Item>
                 <Menu.Item as='a'>Shop</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
+                
+                  <Button className='login' as='a' inverted={!fixed}>
                     Log in
                   </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+
+                  
+                  <Button as='a' link to='pages/signup.jsx' Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
+                  
                 </Menu.Item>
               </Container>
             </Menu>
@@ -224,7 +230,7 @@ const HomepageLayout = () => (
               We Make Bananas That Can Dance
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
+              Yes thats right, you thought it was the stuff of dreams, but even bananas can be
               bioengineered.
             </p>
           </Grid.Column>
@@ -245,13 +251,13 @@ const HomepageLayout = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
+              What a Company
             </Header>
             <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
+              I shouldnt have gone with their competitor.
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               <Image avatar src='/images/avatar/large/nan.jpg' />
