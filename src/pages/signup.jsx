@@ -2,7 +2,7 @@
 import React from 'react'
 import { Form } from 'semantic-ui-react'
 
-const Form1 = () => (
+const signupForm = () => (
   <Form>
     <Form.Input
       error={{ content: 'Please enter your first name', pointing: 'below' }}
@@ -27,4 +27,4 @@ const Form1 = () => (
   </Form>
 )
 
-export default Form1
+export default signupForm

@@ -7,10 +7,10 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import { Component } from 'react'
 import { InView } from 'react-intersection-observer'
-// import { Route, Router } from 'react-router-dom'
+import {  BrowserRouter as Router, Link } from 'react-router-dom'
 import {
   Button,
-  Container,
+  Container, 
   Divider,
   Grid,
   Header,
@@ -83,6 +83,8 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
+      <Router>
+
       <Media greaterThan='mobile'>
         <InView onChange={this.toggleFixedMenu}>
           <Segment
@@ -90,14 +92,14 @@ class DesktopContainer extends Component {
             textAlign='center'
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
-          >
+            >
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
               size='large'
-            >
+              >
               <Container>
                 <Menu.Item as='a' active>
                   Home
@@ -109,10 +111,11 @@ class DesktopContainer extends Component {
                     Log in
                   </Button>
 
-                  
-                  <Button as='a' link to='pages/signup.jsx' Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  <Link to="signup">
+                  <Button as='a' Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
+                  </Link>
                   
                 </Menu.Item>
               </Container>
@@ -123,6 +126,7 @@ class DesktopContainer extends Component {
 
         {children}
       </Media>
+              </Router>
     )
   }
 }

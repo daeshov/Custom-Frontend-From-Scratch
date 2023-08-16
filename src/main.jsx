@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react'
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
@@ -7,20 +8,22 @@ import App from './pages/home.jsx'
 // import './styles.css'
 import 'semantic-ui-css/semantic.min.css'
 import HomepageLayout from './pages/home.jsx'
-import Form1 from './pages/signup.jsx';
+import signupForm from './pages/signup.jsx';
+// import loginform from './pages/login.jsx';
 
 
-const Ap = () => {
+const navbar = () => {
   return (
-    <Router>
-        <Route exact path='/signup.jsx' component={Form1} />    
+    <Switch>
+        
+        <Router exact path="signup" component={signupForm} />    
         <Route exact path="" component={HomepageLayout} />
 
-    </Router>
+    </Switch>
   );
-};
+};``
 
-export default Ap;
+export default navbar;
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
