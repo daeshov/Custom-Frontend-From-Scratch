@@ -7,7 +7,7 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import { Component } from 'react'
 import { InView } from 'react-intersection-observer'
-import {  BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import {
   Button,
   Container, 
@@ -83,7 +83,7 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-      <Router>
+  
 
       <Media greaterThan='mobile'>
         <InView onChange={this.toggleFixedMenu}>
@@ -107,15 +107,15 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a'>Shop</Menu.Item>
                 <Menu.Item position='right'>
                 
-                  <Button className='login' as='a' inverted={!fixed}>
+                  <Button to="/login" as={Link} inverted={!fixed}>
                     Log in
                   </Button>
 
-                  <Link to="signup">
-                  <Button as='a' Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  
+                  <Button as={Link} to="/signup" Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
-                  </Link>
+               
                   
                 </Menu.Item>
               </Container>
@@ -126,7 +126,7 @@ class DesktopContainer extends Component {
 
         {children}
       </Media>
-              </Router>
+      
     )
   }
 }
@@ -161,8 +161,8 @@ class MobileContainer extends Component {
               Home
             </Menu.Item>
             <Menu.Item as='a'>Shop</Menu.Item>
-            <Menu.Item as='a'>Log in</Menu.Item>
-            <Menu.Item as='a'>Sign Up</Menu.Item>
+            <Menu.Item as={Link} to="/login">Log in</Menu.Item>
+            <Menu.Item as={Link} to="/signup">Sign Up</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>

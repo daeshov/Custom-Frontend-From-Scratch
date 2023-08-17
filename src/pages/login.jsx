@@ -1,7 +1,7 @@
 
 import { Button, Form, Segment } from 'semantic-ui-react'
 
-const loginform = () => (
+const Loginform = () => (
   <Segment inverted>
     <Form inverted>
       <Form.Group widths='equal'>
@@ -13,4 +13,4 @@ const loginform = () => (
     </Form>
   </Segment>
 )
-export default loginform
+export default Loginform
