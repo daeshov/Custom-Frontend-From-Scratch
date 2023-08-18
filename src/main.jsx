@@ -32,6 +32,7 @@ ReactDOM.render(
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
+        <Route path="/shopping" element />
 
       </Routes>
     </Router>
