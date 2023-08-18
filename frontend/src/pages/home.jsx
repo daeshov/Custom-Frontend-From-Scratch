@@ -83,7 +83,6 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-  
 
       <Media greaterThan='mobile'>
         <InView onChange={this.toggleFixedMenu}>
@@ -129,7 +128,6 @@ class DesktopContainer extends Component {
 
         {children}
       </Media>
-      
     )
   }
 }
