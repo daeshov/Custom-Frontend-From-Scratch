@@ -185,7 +185,7 @@ class MobileContainer extends Component {
                     <Button as={Link} to="/signup" inverted style={{ marginLeft: '0.5em' }}>
                       Sign Up
                     </Button>
-                    <Button as={Link} to="/shopping" inverted style={{ marginLeft: '0.5em' }}>
+                    <Button as={Link} to="/cart" inverted style={{ marginLeft: '0.5em' }}>
                       Your cart
                     </Button>
                   </Menu.Item>
