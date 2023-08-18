@@ -1,34 +1,41 @@
+/* eslint-disable react/no-deprecated */
 /* eslint-disable react/jsx-no-undef */
 import React from 'react'
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-
-import ReactDOM from 'react-dom/client'
-import App from './pages/home.jsx'
-// import './index.css'
-// import './styles.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
+import SignupForm from './pages/signup.jsx';
 import HomepageLayout from './pages/home.jsx'
-import signupForm from './pages/signup.jsx';
-// import loginform from './pages/login.jsx';
+import Loginform from './pages/login.jsx';
 
 
-const navbar = () => {
+const Navbar =  () => {
+   
   return (
-    <Switch>
-        
-        <Router exact path="signup" component={signupForm} />    
-        <Route exact path="" component={HomepageLayout} />
-
-    </Switch>
+    <Router>
+      <Routes>
+        <Route path="/signup.jsx" component={<SignupForm/>} />    
+  
+      </Routes>
+    </Router>
   );
-};``
+};
 
-export default navbar;
+export default Navbar;
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Router>
+      
+      <Routes>
+        <Route path="/" element={<HomepageLayout />} />
+        <Route path="/signup" element={<SignupForm />} />
+        <Route path="/login" element={<Loginform />} />
+        <Route path="/shopping" element />
 
+      </Routes>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+);

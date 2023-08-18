@@ -1,16 +1,15 @@
 
 import { Button, Form, Segment } from 'semantic-ui-react'
 
-const loginform = () => (
+const Loginform = () => (
   <Segment inverted>
     <Form inverted>
       <Form.Group widths='equal'>
-        <Form.Input fluid label='First name' placeholder='First name' />
-        <Form.Input fluid label='Last name' placeholder='Last name' />
-      </Form.Group>
-      <Form.Checkbox label='I agree to the Terms and Conditions' />
+        <Form.Input fluid label='full name/email' placeholder='Full name/email' />
+        <Form.Input fluid label='password' placeholder='password' />
+      </Form.Group> 
       <Button type='submit'>Submit</Button>
     </Form>
   </Segment>
 )
-export default loginform
+export default Loginform

@@ -1,30 +1,39 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Form } from 'semantic-ui-react'
+import { Form, Segment } from 'semantic-ui-react'
 
-const signupForm = () => (
-  <Form>
+const SignupForm = () => (
+  <Segment inverted>
+  <Form inverted>
     <Form.Input
-      error={{ content: 'Please enter your first name', pointing: 'below' }}
+      error={{ content: 'Please enter your full name', pointing: 'below' }}
       fluid
-      label='First name'
-      placeholder='First name'
+      label='Full name'
+      placeholder='Full name'
       id='form-input-first-name'
     />
-    <Form.Input
-      error='Please enter your last name'
+ 
+     <Form.Input
+      error='Please enter your email'
       fluid
-      label='Last name'
-      placeholder='Last name'
+      label='email'
+      placeholder='email'
+    />
+    <Form.Input
+      error='Please enter a password'
+      fluid
+      label='password'
+      placeholder='password'
     />
     <Form.Checkbox
       label='I agree to the Terms and Conditions'
       error={{
-        content: 'You must agree to the terms and conditions',
-        pointing: 'left',
+      content: 'You must agree to the terms and conditions',
+      pointing: 'left',
       }}
-    />
+      />
   </Form>
+  </Segment>
 )
 
-export default signupForm
+export default SignupForm

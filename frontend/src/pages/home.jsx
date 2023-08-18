@@ -7,7 +7,7 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import { Component } from 'react'
 import { InView } from 'react-intersection-observer'
-import {  BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import {
   Button,
   Container, 
@@ -58,8 +58,8 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Get Started
+    <Button to="/shopping" as={Link} primary size='huge'>
+      Get Started shopping
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -83,7 +83,6 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
 
     return (
-      <Router>
 
       <Media greaterThan='mobile'>
         <InView onChange={this.toggleFixedMenu}>
@@ -107,16 +106,19 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a'>Shop</Menu.Item>
                 <Menu.Item position='right'>
                 
-                  <Button className='login' as='a' inverted={!fixed}>
+                  <Button to="/login" as={Link} inverted={!fixed}>
                     Log in
                   </Button>
 
-                  <Link to="signup">
-                  <Button as='a' Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  
+                  <Button as={Link} to="/signup" Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
-                  </Link>
-                  
+
+                  <Button className='cartbtn' as={Link} to="/cart" inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                    Your cart
+                  </Button>
+
                 </Menu.Item>
               </Container>
             </Menu>
@@ -126,7 +128,6 @@ class DesktopContainer extends Component {
 
         {children}
       </Media>
-              </Router>
     )
   }
 }
@@ -161,8 +162,8 @@ class MobileContainer extends Component {
               Home
             </Menu.Item>
             <Menu.Item as='a'>Shop</Menu.Item>
-            <Menu.Item as='a'>Log in</Menu.Item>
-            <Menu.Item as='a'>Sign Up</Menu.Item>
+            <Menu.Item as={Link} to="/login">Log in</Menu.Item>
+            <Menu.Item as={Link} to="/signup">Sign Up</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher dimmed={sidebarOpened}>
@@ -178,11 +179,14 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted>
+                    <Button as={Link} to="/login" inverted>
                       Log in
                     </Button>
-                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                    <Button as={Link} to="/signup" inverted style={{ marginLeft: '0.5em' }}>
                       Sign Up
+                    </Button>
+                    <Button as={Link} to="/shopping" inverted style={{ marginLeft: '0.5em' }}>
+                      Your cart
                     </Button>
                   </Menu.Item>
                 </Menu>
