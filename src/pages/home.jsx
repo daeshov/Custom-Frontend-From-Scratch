@@ -58,8 +58,8 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Get Started
+    <Button to="/shopping" as={Link} primary size='huge'>
+      Get Started shopping
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -115,8 +115,11 @@ class DesktopContainer extends Component {
                   <Button as={Link} to="/signup" Component inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button>
-               
-                  
+
+                  <Button className='cartbtn' as={Link} to="/cart" inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                    Your cart
+                  </Button>
+
                 </Menu.Item>
               </Container>
             </Menu>
@@ -178,11 +181,14 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted>
+                    <Button as={Link} to="/login" inverted>
                       Log in
                     </Button>
-                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                    <Button as={Link} to="/signup" inverted style={{ marginLeft: '0.5em' }}>
                       Sign Up
+                    </Button>
+                    <Button as={Link} to="/shopping" inverted style={{ marginLeft: '0.5em' }}>
+                      Your cart
                     </Button>
                   </Menu.Item>
                 </Menu>
