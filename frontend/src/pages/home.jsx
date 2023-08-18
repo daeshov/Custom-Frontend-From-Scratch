@@ -21,6 +21,17 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
+import React from 'react';
+import MyImage from '../assets/images/dragon1.png';
+
+function MyComponent() {
+    return (
+        <div>
+            <img src={MyImage} alt="Description" />
+        </div>
+    );
+}
+
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
