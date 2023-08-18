@@ -48,5 +48,6 @@
   "bugs": {
     "url": "https://github.com/daeshov/scalesandslumbers/issues"
   },
-  "homepage": "https://github.com/daeshov/scalesandslumbers#readme"
+  "homepage": "https://github.com/daeshov/scalesandslumbers#readme",
+  "keywords": []
 }
