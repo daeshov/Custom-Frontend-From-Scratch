@@ -9,7 +9,7 @@ import {
   MDBInput,
   MDBRow,
   MDBTypography,
-} from "mdb-react-ui-kit"
+} from "mdb-react-ui-kit";
 
 export default function ProductCards() {
 return (
