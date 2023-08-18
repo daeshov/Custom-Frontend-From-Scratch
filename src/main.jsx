@@ -1,11 +1,40 @@
+/* eslint-disable react/no-deprecated */
+/* eslint-disable react/jsx-no-undef */
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
+import SignupForm from './pages/signup.jsx';
+import HomepageLayout from './pages/home.jsx'
+import Loginform from './pages/login.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+const Navbar =  () => {
+   
+  return (
+    <Router>
+      <Routes>
+        <Route path="/signup.jsx" component={<SignupForm/>} />    
+  
+      </Routes>
+    </Router>
+  );
+};
+
+export default Navbar;
+
+
+ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      
+      <Routes>
+        <Route path="/" element={<HomepageLayout />} />
+        <Route path="/signup" element={<SignupForm />} />
+        <Route path="/login" element={<Loginform />} />
+
+      </Routes>
+    </Router>
   </React.StrictMode>,
-)
+  document.getElementById('root')
+);
