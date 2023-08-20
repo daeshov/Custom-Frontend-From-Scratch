@@ -6,7 +6,10 @@ export default defineConfig({
   root: '.', // Set the project root to the current directory
   
   server: {
-    publicDir: './public' // Adjust the public directory path
+    publicDir: './public', // Adjust the public directory path
+    proxy: {
+      '/api': 'http://localhost:5000' // Proxy the /api endpoint to the backend server
+    }
   },
   
   resolve: {
