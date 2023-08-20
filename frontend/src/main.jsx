@@ -10,12 +10,10 @@ import Loginform from './pages/login.jsx';
 import ProductCards from './pages/cart.jsx';
 
 const Navbar =  () => {
-   
   return (
     <Router>
       <Routes>
         <Route path="/signup.jsx" component={<SignupForm/>} />    
-  
       </Routes>
     </Router>
   );
@@ -27,13 +25,11 @@ export default Navbar;
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      
       <Routes>
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
         <Route path="/cart" element={<ProductCards/>} />
-
       </Routes>
     </Router>
   </React.StrictMode>,
