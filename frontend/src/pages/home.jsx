@@ -23,6 +23,7 @@ import {
 } from 'semantic-ui-react'
 import React from 'react';
 import MyImage from '../assets/images/dragon3.png';
+import headerBackground from '../assets/images/headerBackground.png';
 
 function MyComponent() {
     return (
@@ -100,7 +101,12 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ 
+              minHeight: 700, 
+              padding: '1em 0em',
+              backgroundImage: `url(${headerBackground})`,
+              backgroundSize: 'cover',                   
+              backgroundPosition: 'center center' }}
             vertical
             >
             <Menu

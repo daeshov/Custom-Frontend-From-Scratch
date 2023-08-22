@@ -20,14 +20,18 @@ fetch("/api")
 
 
 const Navbar =  () => {
+
   return (
     <Router>
       <Routes>
-        <Route path="/signup.jsx" component={<SignupForm/>} />    
+        <Route path="/signup.jsx" component={<SignupForm />} />
+        <Route path="/shopping" element={<product data={Product} />} />
+        {/* Any other routes you might have */}
+
       </Routes>
     </Router>
   );
-};
+}
 
 export default Navbar;
 
