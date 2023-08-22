@@ -38,13 +38,9 @@ ReactDOM.render(
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
-<<<<<<< HEAD
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/cart" element={<Items />} />
 
-=======
-        <Route path="/cart" element={<ProductCards/>} />
->>>>>>> baa5382745bc8b2adfa759e25de564afab48a612
       </Routes>
     </Router>
   </React.StrictMode>,
