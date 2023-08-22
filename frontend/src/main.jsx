@@ -4,11 +4,11 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
-import SignupForm from '../pages/signup.jsx';
-import HomepageLayout from '../pages/home.jsx'
-import Loginform from '../pages/login.jsx';
-import {Cartpage, Items } from '../pages/cart.jsx';
-import { Product } from './pages/shopping.jsx';
+import SignupForm from '../src/pages/signup.jsx';
+import HomepageLayout from '../src/pages/home.jsx'
+import Loginform from '../src/pages/login.jsx';
+import {Cartpage, Items } from '../src/pages/cart.jsx';
+import { Product } from '../src/pages/shopping.jsx';
 
 fetch("/api")
   .then((response) => response.json())
