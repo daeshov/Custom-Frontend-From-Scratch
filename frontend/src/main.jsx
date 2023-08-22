@@ -8,6 +8,7 @@ import SignupForm from '../pages/signup.jsx';
 import HomepageLayout from '../pages/home.jsx'
 import Loginform from '../pages/login.jsx';
 import {Cartpage, Items } from '../pages/cart.jsx';
+import { Product } from './pages/shopping.jsx';
 
 fetch("/api")
   .then((response) => response.json())
@@ -20,14 +21,18 @@ fetch("/api")
 
 
 const Navbar =  () => {
+
   return (
     <Router>
       <Routes>
-        <Route path="/signup.jsx" component={<SignupForm/>} />    
+        <Route path="/signup.jsx" component={<SignupForm />} />
+        <Route path="/shopping" element={<product data={Product} />} />
+        {/* Any other routes you might have */}
+
       </Routes>
     </Router>
   );
-};
+}
 
 export default Navbar;
 
