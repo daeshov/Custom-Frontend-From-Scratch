@@ -4,13 +4,23 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
-import SignupForm from './pages/signup.jsx';
-import HomepageLayout from './pages/home.jsx'
-import Loginform from './pages/login.jsx';
+import SignupForm from '../pages/signup.jsx';
+import HomepageLayout from '../pages/home.jsx'
+import Loginform from '../pages/login.jsx';
+import {Cartpage, Items } from '../pages/cart.jsx';
 import { Product } from './pages/shopping.jsx';
 
+fetch("/api")
+  .then((response) => response.json())
+  .then(data => {
+    console.log("Data fetched from /api:", data);
+  })
+  .catch(err => {
+    console.log("Error fetching from /api:", err);
+  });
 
-function Navbar() {
+
+const Navbar =  () => {
 
   return (
     <Router>
@@ -30,13 +40,12 @@ export default Navbar;
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      
       <Routes>
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
-        <Route path="/shopping" element />
-
+        <Route path="/cart" element={<Cartpage />} />
+        <Route path="/cart" element={<Items />} />
       </Routes>
     </Router>
   </React.StrictMode>,
