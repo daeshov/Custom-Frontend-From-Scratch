@@ -1,4 +1,3 @@
-
 import { Button, Form, Segment } from 'semantic-ui-react'
 
 const Loginform = () => (
