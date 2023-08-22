@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ProductProvider from './shop-context';
+import ProductProvider from './componets/shop-context';
 
 
 export const Cartpage = () => {
