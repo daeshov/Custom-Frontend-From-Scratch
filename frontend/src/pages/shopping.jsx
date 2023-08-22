@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const product = (props) => {
+export const Product = (props) => {
   // eslint-disable-next-line no-unused-vars
   const { id, name, price, image } =  props.data;
   return (
