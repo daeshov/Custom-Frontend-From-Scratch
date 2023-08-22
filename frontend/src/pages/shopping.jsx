@@ -14,4 +14,3 @@ export const product = (props) => {
     </div>
   );
 };
- 
