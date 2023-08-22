@@ -1,7 +1,8 @@
 {
-  "name": "scalesandslumbers",
+  "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "proxy": "http://localhost:5000",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,15 +12,8 @@
   },
   "dependencies": {
     "@artsy/fresnel": "^6.1.0",
-    "bcryptjs": "^2.4.3",
     "classnames": "^2.3.2",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "mongoose": "^7.4.3",
-    "mongoose-unique-validator": "^4.0.0",
-    "passport": "^0.6.0",
-    "passport-local": "^1.0.0",
+    "mdb-react-ui-kit": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.2",

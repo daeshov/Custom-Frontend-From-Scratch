@@ -9,13 +9,20 @@ import HomepageLayout from './pages/home.jsx'
 import Loginform from './pages/login.jsx';
 import ProductCards from './pages/cart.jsx';
 
+fetch("/api")
+  .then((response) => response.json())
+  .then(data => {
+    console.log("Data fetched from /api:", data);
+  })
+  .catch(err => {
+    console.log("Error fetching from /api:", err);
+  });
+
 const Navbar =  () => {
-   
   return (
     <Router>
       <Routes>
         <Route path="/signup.jsx" component={<SignupForm/>} />    
-  
       </Routes>
     </Router>
   );
@@ -27,13 +34,11 @@ export default Navbar;
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      
       <Routes>
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
         <Route path="/cart" element={<ProductCards/>} />
-
       </Routes>
     </Router>
   </React.StrictMode>,
