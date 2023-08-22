@@ -21,6 +21,17 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
+import React from 'react';
+import MyImage from '../assets/images/dragon3.png';
+
+function MyComponent() {
+    return (
+        <div>
+            <img src={MyImage} alt="Description" />
+        </div>
+    );
+}
+
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -39,7 +50,7 @@ const HomepageHeading = ({ mobile }) => (
     <Header
       color='red'
       as='h1'
-      content='scalesandslumber'
+      content='Scales & Slumber'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -50,7 +61,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='“Draco Dormiens Nunquam Titillandus”.'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -228,22 +239,32 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+              Beds For Fire Breathing Bestie!!
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
+            <h2 style={{ fontSize: '1.33em' }}>🔥 Introducing Draconia Comfort! 🔥</h2>
+
+<p>Do you have a majestic pet dragon at home?</p> 
+<p>Or maybe a playful little drake that needs its own lounging space?</p> 
+<p>Every dragon, no matter the size or breed, deserves a throne that befits its regal status!</p>
+
+<ul>
+    <li>🐉 Ultra-Resilient Material: Crafted to withstand the hottest dragon breath and the heaviest dragon scales.</li>
+    <li>🌌 Magical Comfort: Infused with moonbeams and stardust to ensure a celestial sleep every time.</li>
+    <li>🌿 Eco-Friendly: Sourced from the enchanted forests of Elvendale, these beds leave no magical carbon footprint.</li>
+    <li>⭐ Fit for Every Dragon: From the tiniest wyvern to the most massive imperial dragon, we have the perfect size to ensure a snug fit!</li>
+</ul>
+
+<p>Gift your scaly friend the luxury they deserve. With Draconia Comfort, let them lounge like the royals of the sky they truly are. After all, isn't it about time your dragon slept on a cloud of dreams? 🌙🔮</p>
+
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+              We Make Beds That Keep Your Dragon Asleep!!
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes thats right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
+            Customization avaiable!
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+          <Image src={MyImage} size='medium' rounded />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
