@@ -7,20 +7,22 @@ import 'semantic-ui-css/semantic.min.css'
 import SignupForm from './pages/signup.jsx';
 import HomepageLayout from './pages/home.jsx'
 import Loginform from './pages/login.jsx';
+import { Product } from './pages/shopping.jsx';
 
 
+function Navbar() {
 
-const Navbar =  () => {
-   
   return (
     <Router>
       <Routes>
-        <Route path="/signup.jsx" component={<SignupForm/>} />    
-  
+        <Route path="/signup.jsx" component={<SignupForm />} />
+        <Route path="/shopping" element={<product data={Product} />} />
+        {/* Any other routes you might have */}
+
       </Routes>
     </Router>
   );
-};
+}
 
 export default Navbar;
 
