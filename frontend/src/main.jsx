@@ -9,13 +9,20 @@ import HomepageLayout from '../pages/home.jsx'
 import Loginform from '../pages/login.jsx';
 import {Cartpage, Items } from '../pages/cart.jsx';
 
+fetch("/api")
+  .then((response) => response.json())
+  .then(data => {
+    console.log("Data fetched from /api:", data);
+  })
+  .catch(err => {
+    console.log("Error fetching from /api:", err);
+  });
+
 const Navbar =  () => {
-   
   return (
     <Router>
       <Routes>
         <Route path="/signup.jsx" component={<SignupForm/>} />    
-  
       </Routes>
     </Router>
   );
@@ -27,14 +34,17 @@ export default Navbar;
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      
       <Routes>
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
+<<<<<<< HEAD
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/cart" element={<Items />} />
 
+=======
+        <Route path="/cart" element={<ProductCards/>} />
+>>>>>>> baa5382745bc8b2adfa759e25de564afab48a612
       </Routes>
     </Router>
   </React.StrictMode>,

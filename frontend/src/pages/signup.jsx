@@ -12,8 +12,8 @@ const SignupForm = () => (
       placeholder='Full name'
       id='form-input-first-name'
     />
-
-    <Form.Input
+ 
+     <Form.Input
       error='Please enter your email'
       fluid
       label='email'
