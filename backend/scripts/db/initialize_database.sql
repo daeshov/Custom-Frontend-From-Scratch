@@ -1,6 +1,6 @@
 -- Initialization script for the database
 -- This script will create the database and tables if they do not exist
-CREATE DATABASE IF NOT EXISTS scalesandslumbers;
+CREATE DATABASE IF NOT EXISTS scalesandslumbers
 
 -- This makes sure that a wider range of characters can be used such as emojis or different languages
 CHARACTER SET utf8mb4
