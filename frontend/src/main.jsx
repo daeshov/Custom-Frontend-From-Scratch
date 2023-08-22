@@ -4,10 +4,10 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom'
 import 'semantic-ui-css/semantic.min.css'
-import SignupForm from './pages/signup.jsx';
-import HomepageLayout from './pages/home.jsx'
-import Loginform from './pages/login.jsx';
-import ProductCards from './pages/cart.jsx';
+import SignupForm from '../pages/signup.jsx';
+import HomepageLayout from '../pages/home.jsx'
+import Loginform from '../pages/login.jsx';
+import {Cartpage, Items } from '../pages/cart.jsx';
 
 const Navbar =  () => {
    
@@ -32,7 +32,8 @@ ReactDOM.render(
         <Route path="/" element={<HomepageLayout />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/login" element={<Loginform />} />
-        <Route path="/cart" element={<ProductCards/>} />
+        <Route path="/cart" element={<Cartpage />} />
+        <Route path="/cart" element={<Items />} />
 
       </Routes>
     </Router>
