@@ -1,9 +1,30 @@
 const express = require('express')
 const app = express()
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+
+const mysql = require('mysql2/promise');
+
+const db = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '1010',
+    database: 'scalesandslumbers'
+});
 
 // Routes
 app.get('/api', (req, res) => {
     res.json({ "message": "Welcome to Scales & Slumber!" });
+});
+
+app.get('/api/products', async (req, res) => {
+    try {
+        const [rows, fields] = await db.query('SELECT * FROM Products');
+        res.json(rows);
+    } catch (err) {
+        res.status(500).json({ message: "Server error", error: err });
+    }
 });
 
 // Server start
