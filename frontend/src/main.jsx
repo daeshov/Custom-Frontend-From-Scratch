@@ -7,9 +7,10 @@ import 'semantic-ui-css/semantic.min.css'
 import SignupForm from "../src/pages/signup"
 import HomepageLayout from '../src/pages/home.jsx'
 import Loginform from '../src/pages/login';
-import {Cartpage, Items } from '../src/pages/cart.jsx';
+import {Cartpage, Items } from './pages/cart.jsx';
+import { Shopping } from '../src/pages/shopping.jsx';
 
-fetch("/api")
+fetch("")
   .then((response) => response.json())
   .then(data => {
     console.log("Data fetched from /api:", data);
@@ -45,6 +46,7 @@ ReactDOM.render(
         <Route path="/login" element={<Loginform />} />
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/cart" element={<Items />} />
+        <Route path="/shopping" element={<Shopping />} />
       </Routes>
     </Router>
   </React.StrictMode>,

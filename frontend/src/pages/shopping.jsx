@@ -5,7 +5,7 @@ export const Product = (props) => {
   const { id, name, price, image } =  props.data;
   return (
     <div className="product">
-      <img src={frontend/src/assets/product}/>
+      <img src={"../frontend/src/assets/product"}/>
       <div className="description">
         <p>
           <b>{name}</b>
@@ -17,7 +17,7 @@ export const Product = (props) => {
 };
 
 
-const Shopping = () => {
+ export const Shopping = () => {
   const products = [
     { id: 1, name: 'Product 1', price: 10, image: 'path_to_image1.jpg' },
     { id: 2, name: 'Product 2', price: 15, image: 'path_to_image2.jpg' },
