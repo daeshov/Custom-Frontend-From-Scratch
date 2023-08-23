@@ -27,6 +27,10 @@ app.get('/api/products', async (req, res) => {
     }
 });
 
+
+// Images route
+app.use('/images', express.static('backend/scripts/db/images'));
+
 // Server start
 const PORT = process.env.PORT || 5000;
 
