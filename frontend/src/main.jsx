@@ -8,7 +8,7 @@ import SignupForm from '../src/pages/signup.jsx';
 import HomepageLayout from '../src/pages/home.jsx'
 import Loginform from '../src/pages/login.jsx';
 import {Cartpage, Items } from '../src/pages/cart.jsx';
-import { Product } from '../src/pages/shopping.jsx';
+// import { Product } from '../src/pages/shopping.jsx';
 
 fetch("/api")
   .then((response) => response.json())
@@ -26,7 +26,7 @@ const Navbar =  () => {
     <Router>
       <Routes>
         <Route path="/signup.jsx" component={<SignupForm />} />
-        <Route path="/shopping" element={<product data={Product} />} />
+        {/* <Route path="/shopping" element={<product data={Product} />} /> */}
         {/* Any other routes you might have */}
 
       </Routes>
@@ -46,7 +46,7 @@ ReactDOM.render(
         <Route path="/login" element={<Loginform />} />
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/cart" element={<Items />} />
-        <Route path="/shopping" element={<Shopping />} />
+        {/* <Route path="/shopping" element={<Shopping />} /> */}
       </Routes>
     </Router>
   </React.StrictMode>,
