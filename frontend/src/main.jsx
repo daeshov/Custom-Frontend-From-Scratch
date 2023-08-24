@@ -46,6 +46,7 @@ ReactDOM.render(
         <Route path="/login" element={<Loginform />} />
         <Route path="/cart" element={<Cartpage />} />
         <Route path="/cart" element={<Items />} />
+        <Route path="/shopping" element={<Shopping />} />
       </Routes>
     </Router>
   </React.StrictMode>,
