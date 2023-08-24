@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -26,6 +29,10 @@ app.get('/api/products', async (req, res) => {
         res.status(500).json({ message: "Server error", error: err });
     }
 });
+
+
+// Images route
+app.use('/images', express.static('scripts/db/images'));
 
 // Server start
 const PORT = process.env.PORT || 5000;
