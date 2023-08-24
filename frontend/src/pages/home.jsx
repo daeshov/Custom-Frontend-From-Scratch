@@ -288,15 +288,13 @@ const HomepageLayout = () => (
             <Header as='h3' style={{ fontSize: '2em' }}>
               What a Company
             </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+            <p style={{ fontSize: '1.33em' }}>Friendly and reliable service</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               I shouldnt have gone with their competitor.
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -306,13 +304,28 @@ const HomepageLayout = () => (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
+          SATISFIED CUSTOMER
         </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
-        </p>
+        <div style={{ fontSize: '1.33em' }}>
+    <h2>Sir Cedric's Quest for Draco's Comfort</h2>
+
+    <p>In the enchanting village of Whimsydale, Sir Cedric, a dragon enthusiast, had a peculiar dilemma. His beloved pet dragon, Draco, was growing at an astonishing rate, and his once-comfortable nest of gold and gems no longer seemed to offer the comfort it once did.</p>
+
+    <p>Every night, Draco would twist and turn, occasionally letting out a puff of smoke in his sleep. Each morning, Cedric would find him sprawled out awkwardly, one wing hanging off the ledge of their tower, looking rather disgruntled.</p>
+
+    <p>Determined to find a solution, Cedric set out on a quest to find the perfect sleep accessory for his scaly companion. He visited the mattress mages of Misty Mountains, known for crafting beds so comfortable that even elves couldn't resist them. But even their finest creation, woven from moonlight and dreams, was too soft for Draco's hefty frame.</p>
+
+    <p>Next, he trekked to the hammock huts of Hanging Valleys. Their hammocks, suspended between giant trees and made of intertwined rainbows, were known to cradle giants into deep slumbers. But alas, even the sturdiest hammock sagged under Draco's weight.</p>
+
+    <p>Despondent but not defeated, Cedric had an epiphany while watching Draco playfully try to catch fireflies one evening. He noticed the way the fireflies' glow seemed to form a net of stars in the night sky.</p>
+
+    <p>Inspired, he worked with the finest craftsmen and magical beings of Whimsydale to create a majestic hammock. This masterpiece was woven from starlight, reinforced with the sturdiness of mountain roots, and imbued with a touch of Draco's own firefly-chasing magic.</p>
+
+    <p>The night after the hammock was hung, Draco climbed onto it with a touch of skepticism. But as soon as he settled, his eyes grew heavy, and in minutes, he was snoring, curled up comfortably with fireflies twinkling around him.</p>
+
+    <p>Sir Cedric watched with a satisfied smile, knowing that the bond between a dragon and his owner could overcome even the toughest of challenges. And so, under the soft glow of the stars, Draco found his perfect haven of rest, and Cedric discovered that the solution to the biggest problems often lay in the simplest joys.</p>
+</div>
+
         <Button as='a' size='large'>
           Read More
         </Button>
@@ -327,13 +340,31 @@ const HomepageLayout = () => (
         </Divider>
 
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Did We Tell You About Our Bananas?
+          Did We Tell You About Our dragon sheets?
         </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-          it's really true. It took years of gene splicing and combinatory DNA research, but our
-          bananas can really dance.
-        </p>
+        <div style={{ fontSize: '1.33em' }}>
+    <h2>Introducing: Draconis Dream Sheets!</h2>
+
+    <h3>Unlock the Majesty of Nighttime with Draconis Dream Sheets!</h3>
+
+    <p>In the realm of dragon comforts, few things rival the experience of wrapping up in our premium Draconis Dream Sheets. Designed with the mythical might and majesty of dragons in mind, these sheets promise to elevate nighttime to a realm of unparalleled coziness.</p>
+
+    <h3>Key Quality Points:</h3>
+    <ul>
+        <li><strong>Scaled Comfort Technology:</strong> Just as dragons have scales to protect and comfort them, our sheets feature a unique pattern that mimics this design, providing a mix of softness and sturdiness.</li>
+
+        <li><strong>Enchanted Temperature Regulation:</strong> Ever dealt with a dragon that breathes fire in its sleep? Our sheets are woven with magical fibers that adjust according to your dragon's body temperature, ensuring they remain cool during hot nights and warm during colder times.</li>
+
+        <li><strong>Celestial Silk Blend:</strong> Draconis Dream Sheets are crafted from a blend of the finest celestial silks, sourced from the far corners of enchanted forests. This ensures a smooth texture that even the most sensitive dragon skins will find soothing.</li>
+
+        <li><strong>Eco-friendly & Enchanting:</strong> Our sheets are not only kind to dragon skin but also to our planet. Sustainably sourced and created with a blend of natural and magical processes, they're the eco-friendly choice for the conscious dragon owner.</li>
+
+        <li><strong>Majestic Aesthetics:</strong> Available in a range of ethereal colors, from Midnight Star to Dawn's Gold, our sheets complement any dragon's lair, adding a touch of elegance and luxury.</li>
+    </ul>
+
+    <p>Invest in the best for your legendary companion. Wrap them in the magic of Draconis Dream Sheets and watch them soar into the realm of dreams like never before. 🌌🐉🛌</p>
+</div>
+
         <Button as='a' size='large'>
           I'm Still Quite Interested
         </Button>
@@ -356,18 +387,17 @@ const HomepageLayout = () => (
             <Grid.Column width={3}>
               <Header inverted as='h4' content='Services' />
               <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
+                <List.Item as='a'>Dragon Bed Pre-Order</List.Item>
                 <List.Item as='a'>DNA FAQ</List.Item>
                 <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
+                <List.Item as='a'>Favorite Dragon Movie</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
               <Header as='h4' inverted>
-                Footer Header
+                Save the Dragons
               </Header>
-              <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
+              <p>Help Save the Dragons and their homes!
               </p>
             </Grid.Column>
           </Grid.Row>
